@@ -1,1 +1,1 @@
-# GeoDWmap
+# MapQuery
