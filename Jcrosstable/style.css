@@ -1,0 +1,16 @@
+.block-pivoting-left {
+	width: 20px;
+	float: left;
+	height: 20px;
+}
+
+.block-pivoting-right {
+	width: 20px;
+	float: right;
+	height: 20px;
+}
+
+.pivoting {
+	padding: 2px 2px 2px 2px;
+	cursor: pointer;
+}

@@ -1,0 +1,284 @@
+/*#map
+    {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }*/
+@CHARSET "ISO-8859-1";
+#map
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 98%;
+  width: 60%;
+  margin-top:1%;
+  margin-left: 39%;
+  /*border-style:solid;
+  border-width:1px;*/
+}
+
+    label { white-space: nowrap; }
+
+    label span { display: inline-block; width: 4rem;  font-size: 11px;}
+    input { width: 3rem;  }
+
+    button { width: 11em;}
+
+.links
+{
+  float: right;
+}
+  
+.mobile-shrink
+{
+  font-size: .6em;
+}
+
+.not-mobile
+{
+  display: none;
+}
+
+@media only screen and (min-width: 800px) 
+{  
+  .info
+  {
+    width: 35% !important;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+  }
+
+  .mobile-shrink
+  {
+    font-size: 1em;
+  }
+  
+  .not-mobile
+  {
+    display: block;
+  }
+}
+
+html
+{
+  font:13px/1.231 Calibri,Arial,sans-serif; *font-size:small;
+}
+
+.info 
+{
+  background: #EBF5FF;
+  border-radius: 5px;
+  box-shadow: -3px 3px #444;
+  opacity: .89;
+  padding: 5px;
+  width: 35%;
+}
+
+fieldset { border: none; }
+
+legend {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.btn{
+	font-size:11px
+}
+
+#q{
+	color: #FFFFFF;
+}
+
+#btn-clear{
+	font-size:11px;
+	width: 4rem;	
+	float:right;
+}
+
+#btn-build, #btn-query{
+	font-size:11px;
+	width: 7rem;
+	margin-left:2%;
+}
+
+#query{
+	font-size:11px;
+	width: 5rem;
+	/*margin: 74% 0 0 89%;*/
+	float:right;
+}
+
+#modes, #types{
+	margin-left: 5px;
+}
+
+#tables{
+	/*margin: 20% 0 0 7%;*/
+	margin: 40% 0 0 13%;
+	overflow: auto; 
+	height: 250px;
+	width: 130px;
+	/*border-style:solid;
+	border-width:1px;*/
+}
+
+#combo{
+	margin: 40% 0 0 0;
+}
+
+#load{
+	margin: 50% 0 0 13%;
+}
+
+/*#select{
+	margin-left:2%;
+}*/
+
+#write{
+	overflow: auto; 
+	width:22%;
+	height:10%;
+	color: #000000; 
+	font-family: sans-serif; 
+	font-size: 13px;
+	margin: 2% 0 0 0;
+	padding: 0 0 0 0;
+	/*border-style:solid;
+	border-width:1px;*/
+}
+
+#select, #espacial{
+	width: 94%;
+	height: 75px;
+}
+#where{
+	width: 94%;
+	height: 45px;
+}
+
+.left {
+	float:left;
+	font-size:11px;
+}
+
+.right{
+	float:right;
+}
+
+.clear{
+	clear:both;
+}
+
+#options{
+  width: 15%;
+  /*float:left;*/
+  /*border-style:solid;
+  border-width:1px;*/
+}
+
+#draw{
+  margin-top:0;
+  float:right;
+  width:71%;
+  /*border-style:solid;
+  border-width:1px;*/
+}
+
+#build{
+  width:70%;
+  margin: 0 0 0 10%;
+  /*border-style:solid;
+  border-width:1px;*/
+}
+
+#bld {
+  width:57%;
+  margin: 0 0 0 20%;
+  /*border-style:solid;
+  border-width:1px;*/
+}
+
+.lbl-espacial{
+  font-size: 13px;
+  width:6rem;
+}
+
+.lbl-convencional{
+	font-size: 13px;
+	width:11rem;
+}
+
+/*.com{
+	font-size: 13px;
+	width:20rem;
+}*/
+
+#espaciais, #convencionais{
+	float: left;
+	margin: 0 4% 0 0;
+}
+
+#exeBuild {
+	font-size:11px;
+	width: 5rem;
+}
+
+#btns-bld{
+	/*border-style:solid;
+  	border-width:1px;*/
+}
+
+#query-succ{
+	width:75%;
+	margin-top: 15%;
+	float:right;
+	/*border-style:solid;
+  	border-width:1px;*/
+}
+
+#ibjs{
+	overflow: auto; 
+	height: 280px;
+	width: 150px;
+	margin: 40% 0 0 13%;
+	/*border-style:solid;
+  	border-width:1px;*/
+}
+
+#res{
+  	/*width:100%;*/
+  	margin: 5% 0 0 20%;
+	/*border-style:solid;
+  	border-width:1px;*/
+}
+
+table{
+	border-color: #000000; 
+	font-size: 13px; 
+	color: #000000; 
+	width: 89px
+}
+
+/*Abas-----------------------------------------------------------------------------------------*/
+.tabs
+{
+margin: 0 50% 40% 0;
+padding: 0 0 0 0;
+/*text-style:none;*/
+transform:rotate(90deg);
+-moz-transform:rotate(90deg); /* Firefox 4 */
+-webkit-transform:rotate(90deg); /* Safari and Chrome */
+-o-transform:rotate(90deg); /* Opera */
+}
+
+#tabs{
+	margin-top: 10%;
+	/*border-style:solid;
+	border-width:1px;*/
+}

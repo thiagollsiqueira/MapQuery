@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+          <script src="../bootstrap/html5.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css" />	
+		<link rel="stylesheet" href="jquery-ui.css" type="text/css" />
+        <script src="jquery-1.8.3.js"></script>	
+		<script src="jquery-ui.js"></script>
+        <script src="jcrosstable-plugn.js"></script>		
+		<script>
+			var data = []; 
+			data.push(["ASIA", "CHINA", 1992, 31689222674, 5]); 
+			data.push(["ASIA", "CHINA", 1993, 31207214888, 5]); 
+			data.push(["ASIA", "CHINA", 1994, 31926517793, 5]); 
+			data.push(["ASIA", "CHINA", 1995, 32298826594, 5]); 
+			data.push(["ASIA", "CHINA", 1996, 32333641442, 5]); 
+			data.push(["ASIA", "CHINA", 1997, 31327384072, 5]); 
+			data.push(["ASIA", "INDIA", 1992, 27910388563, 5]); 
+			data.push(["ASIA", "INDIA", 1993, 28669881069, 5]); 
+			data.push(["ASIA", "INDIA", 1994, 29343326950, 5]); 
+			data.push(["ASIA", "INDIA", 1995, 28922380004, 5]); 
+			data.push(["ASIA", "INDIA", 1996, 29361749191, 5]); 
+			data.push(["ASIA", "INDIA", 1997, 29421629324, 5]); 
+			data.push(["ASIA", "INDONESIA", 1992, 30990831267, 5]); 
+			data.push(["ASIA", "INDONESIA", 1993, 31455798119, 5]); 
+			data.push(["ASIA", "INDONESIA", 1994, 31677115551, 5]); 
+			data.push(["ASIA", "INDONESIA", 1995, 31761340210, 5]); 
+			data.push(["ASIA", "INDONESIA", 1996, 31453104734, 5]); 
+			data.push(["ASIA", "INDONESIA", 1997, 31478506122, 5]); 
+			data.push(["ASIA", "JAPAN", 1992, 29239959577, 5]); 
+			data.push(["ASIA", "JAPAN", 1993, 30469081937, 5]); 
+			data.push(["ASIA", "JAPAN", 1994, 29977218222, 5]); 
+			data.push(["ASIA", "JAPAN", 1995, 29733182395, 5]); 
+			data.push(["ASIA", "JAPAN", 1996, 29901316952, 5]); 
+			data.push(["ASIA", "JAPAN", 1997, 29860665098, 5]); 
+			data.push(["ASIA", "VIETNAM", 1992, 27229816811, 5]); 
+			data.push(["ASIA", "VIETNAM", 1993, 27967488661, 5]); 
+			data.push(["ASIA", "VIETNAM", 1994, 27413979172, 5]); 
+			data.push(["ASIA", "VIETNAM", 1995, 27364711397, 5]); 
+			data.push(["ASIA", "VIETNAM", 1996, 27553006375, 5]); 
+			data.push(["ASIA", "VIETNAM", 1997, 27240345298, 5]); 
+			
+			data.push(["AMERICA", "BRAZIL", 1992, 31689222674, 5]); 
+			data.push(["AMERICA", "BRAZIL", 1993, 31207214888, 5]); 
+			data.push(["AMERICA", "BRAZIL", 1994, 31926517793, 5]); 
+			data.push(["AMERICA", "BRAZIL", 1995, 32298826594, 5]); 
+			data.push(["AMERICA", "BRAZIL", 1996, 32333641442, 5]); 
+			data.push(["AMERICA", "BRAZIL", 1997, 31327384072, 5]); 
+			data.push(["AMERICA", "EUA", 1992, 27910388563, 5]); 
+			data.push(["AMERICA", "EUA", 1993, 28669881069, 5]); 
+			data.push(["AMERICA", "EUA", 1994, 29343326950, 5]); 
+			data.push(["AMERICA", "EUA", 1995, 28922380004, 5]); 
+			data.push(["AMERICA", "EUA", 1996, 29361749191, 5]); 
+			data.push(["AMERICA", "EUA", 1997, 29421629324, 5]); 
+			
+			$(document).ready(function() {
+				var options = {
+					data: data,
+					columns: [
+						{index:3, text: "Ano"}
+					],
+					rows: [	{index: 1,
+						text: "Continente"
+						},
+						{
+						index: 2,
+						text: "Países"}						
+					],
+					measures: [{
+						index: 4,
+						measure: "Receita",
+						aggregateFunction: "sum",
+						aggregateTotalFunction: "avg"
+						},
+						{index: 5,
+						measure: "Quantidade",
+						aggregateFunction: "avg",
+						aggregateTotalFunction: "count"
+						}
+					],
+					title: "Primeiro Teste",
+					pivoting: true,
+					onPivoting: function(columns, rows) {
+						console.log(columns);
+						console.log(rows);
+					}
+				};
+				$("#resultado").jcrosstable(options);
+				
+			
+			});
+		</script>
+        <title> Testando </title>
+    </head>
+
+    <body id="bootstrap-js">
+        <div class="all-page">			
+            <div class="container wrapper">	
+                <h1>Testando construção de tabela cruzada</h1>
+				<div id="resultado">
+				</div>
+            </div>	
+        </div>		
+    </body>
+</html>
+

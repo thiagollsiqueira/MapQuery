@@ -1,0 +1,53 @@
+<Schema name="ssb">
+  <Cube name="ssb-q30" cache="true" enabled="true">
+    <Table name="lineorder" schema="public" alias="">
+    </Table>
+    <Dimension type="StandardDimension" foreignKey="lo_orderdate" name="Date">
+      <Hierarchy name="Year" hasAll="true" primaryKey="d_datekey">
+        <Table name="date" schema="public" alias="">
+        </Table>
+        <Level name="Year" table="date" column="d_year" type="Integer" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension name="Supplier" foreignKey="lo_suppkey">
+		<Hierarchy name="Espacial" hasAll="true" primaryKey="s_suppkey" primaryKeyTable="supplier">
+			<Join leftKey="city_pk" rightAlias="s_city_fk" rightKey="s_city_fk">
+				<Table name="supplier"/>
+				<Table name="city"/>
+			</Join>
+			<Join leftKey="nation_pk" rightAlias="s_nation_fk" rightKey="s_nation_fk">
+				<Table name="supplier"/>
+				<Table name="nation"/>
+			</Join>
+			<Join leftKey="region_pk" rightAlias="s_region_fk" rightKey="s_region_fk">
+				<Table name="supplier"/>
+				<Table name="region"/>
+			</Join>
+			<Level name="Region" table="region" column="region_geo" type="Geometry" uniqueMembers="false">
+				<Property name="Primary Key" column="region_pk" table="region" type="Integer" description="KeyMatch"/>
+			</Level>
+			<Level name="Nation" table="nation" column="nation_geo" type="Geometry" uniqueMembers="false">
+				<Property name="Primary Key" column="nation_pk" table="nation" type="Integer" description="KeyMatch"/>
+			</Level>		
+			<Level name="City" table="city" column="city_geo" type="Geometry" uniqueMembers="false">
+				<Property name="Primary Key" column="city_pk" table="city" type="Integer" description="KeyMatch"/>
+			</Level>
+			<Level name="Address" table="supplier" column="s_address" type="String" uniqueMembers="false">
+			</Level>
+		</Hierarchy>
+	</Dimension>
+    <Dimension type="StandardDimension" foreignKey="lo_custkey" name="Customer">
+      <Hierarchy name="Customer" hasAll="true" primaryKey="c_custkey">
+        <Table name="customer" schema="public">
+        </Table>
+        <Level name="Region" table="customer" column="c_region" type="String" uniqueMembers="false">
+        </Level>
+        <Level name="Nation" table="customer" column="c_nation" type="String" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Revenue" column="lo_revenue" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

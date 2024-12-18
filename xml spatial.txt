@@ -1,0 +1,35 @@
+<Dimension name="Product" foreignKey="product_id">
+	<Hierarchy hasAll="true" primaryKey="product_id" primaryKeyTable="product">
+		<Join leftKey="product_class_key" rightAlias="product_class" rightKey="product_class_id">
+			<Table name="product"/>
+			<Join leftKey="product_type_id" rightKey="product_type_id">
+				<Table name="product_class"/>
+				<Table name="product_type"/>
+			</Join>
+		</Join>
+	</Hierarchy>
+</Dimension>
+
+<Dimension name="Supplier" foreignKey="lo_suppkey">
+	<Hierarchy hasAll="true" primaryKey="s_suppkey" primaryKeyTable="supplier">
+		<Join leftKey="city_pk" rightAlias="s_city_fk" rightKey="s_city_fk">
+			<Table name="city"/>
+		</Join>
+		<Join leftKey="nation_pk" rightAlias="s_nation_fk" rightKey="s_nation_fk">
+			<Table name="nation"/>
+		</Join>
+		<Join leftKey="region_pk" rightAlias="s_region_fk" rightKey="s_region_fk">
+			<Table name="region"/>
+		</Join>
+		<Level name="Region" table="region" column="region_geo" type="Geometry" uniqueMembers="false">
+			<Property name="Primary Key" column="region_pk" table="region" type="Integer" description="KeyMatch"/>
+			<Property name="Name" column="region" table="supplier" type="String" description="Descritive"/>
+        </Level>
+        <Level name="Nation" table="supplier" column="s_nation" type="String" uniqueMembers="false">
+        </Level>		
+		<Level name="City" table="supplier" column="s_city" type="String" uniqueMembers="false">
+        </Level>
+		<Level name="Address" table="supplier" column="s_address" type="String" uniqueMembers="false">
+        </Level>
+	</Hierarchy>
+</Dimension>

@@ -1,0 +1,98 @@
+JSON de erro: 
+var error = {
+	error: "string de erro",
+	errorQuery: "string de erro da consulta"
+}
+
+JSON inicial:
+var initial = {
+	indexName: "string com o nome do índice",
+	columns: [vetor das colunas indexadas],
+	layers: [vetor das colunas geográficas indexadas (cada posição é um JSON formado por layer)], //verificar
+	cube: estrutura hierárquica do cubo de dados //a definir
+}
+
+JSON de resposta de uma consulta:
+var response = {
+	data: [vetor multidimensional com o resultado da consulta],
+	message: "string de mensagem que nao teve resultados ou outro tipo de mensagem que nao eh erro",
+	executedQuery: "string da consulta executada",
+	updateQuery: boolean -- significa que deve atualizar o texto do textarea com a consulta nova gerada pelo olap,
+	time: "mensagem que informa o tempo que foi executada a consulta",
+	olap: [array formado por objetos JSON {column:"nation", rollup:"region", drilldown:"city"}],
+	typeSpatialQuery: "tipo da consulta espacial executada",
+	spatialWindowQuery: [vetor de objetos JSON das últimas janelas de consulta executadas {x:double, y:double, z:double, w:double}],
+	updateSpatialWindowQuery: boolean - significa que deve atualizar no mapa as novas janelas de consulta,
+	updateCube: booleano se precisa ou não atualizar a estrutura do cubo de dados
+}
+
+Exemplos dos JSONs:
+error = {
+	error: "índice não encontrado",
+	errorQuery: "coluna y não existe"
+}
+
+initial = {
+	indexName: "indice1",
+	columns: ["region", "nation", "ano", "receita", "quantidade"],
+	layers: ["region_geo", "nation_geo"]
+}
+
+Resultado de uma consulta normal:
+var data = []; 
+			data.push(["ASIA", "CHINA", 1992, 31689222674, 5]); 
+			data.push(["ASIA", "CHINA", 1993, 31207214888, 5]); 
+			data.push(["ASIA", "CHINA", 1994, 31926517793, 5]); 
+			data.push(["ASIA", "CHINA", 1995, 32298826594, 5]); 
+			data.push(["ASIA", "CHINA", 1996, 32333641442, 5]); 
+			data.push(["ASIA", "CHINA", 1997, 31327384072, 5]); 
+			data.push(["ASIA", "INDIA", 1992, 27910388563, 5]); 
+			data.push(["ASIA", "INDIA", 1993, 28669881069, 5]); 
+			data.push(["ASIA", "INDIA", 1994, 29343326950, 5]); 
+			data.push(["ASIA", "INDIA", 1995, 28922380004, 5]); 
+			data.push(["ASIA", "INDIA", 1996, 29361749191, 5]); 
+			data.push(["ASIA", "INDIA", 1997, 29421629324, 5]); 
+			data.push(["ASIA", "INDONESIA", 1992, 30990831267, 5]); 
+			data.push(["ASIA", "INDONESIA", 1993, 31455798119, 5]); 
+			data.push(["ASIA", "INDONESIA", 1994, 31677115551, 5]); 
+			data.push(["ASIA", "INDONESIA", 1995, 31761340210, 5]); 
+			data.push(["ASIA", "INDONESIA", 1996, 31453104734, 5]); 
+			data.push(["ASIA", "INDONESIA", 1997, 31478506122, 5]); 
+			data.push(["ASIA", "JAPAN", 1992, 29239959577, 5]); 
+			data.push(["ASIA", "JAPAN", 1993, 30469081937, 5]); 
+			data.push(["ASIA", "JAPAN", 1994, 29977218222, 5]); 
+			data.push(["ASIA", "JAPAN", 1995, 29733182395, 5]); 
+			data.push(["ASIA", "JAPAN", 1996, 29901316952, 5]); 
+			data.push(["ASIA", "JAPAN", 1997, 29860665098, 5]); 
+			data.push(["ASIA", "VIETNAM", 1992, 27229816811, 5]); 
+			data.push(["ASIA", "VIETNAM", 1993, 27967488661, 5]); 
+			data.push(["ASIA", "VIETNAM", 1994, 27413979172, 5]); 
+			data.push(["ASIA", "VIETNAM", 1995, 27364711397, 5]); 
+			data.push(["ASIA", "VIETNAM", 1996, 27553006375, 5]); 
+			data.push(["ASIA", "VIETNAM", 1997, 27240345298, 5]); 
+			
+			data.push(["AMERICA", "BRAZIL", 1992, 31689222674, 5]); 
+			data.push(["AMERICA", "BRAZIL", 1993, 31207214888, 5]); 
+			data.push(["AMERICA", "BRAZIL", 1994, 31926517793, 5]); 
+			data.push(["AMERICA", "BRAZIL", 1995, 32298826594, 5]); 
+			data.push(["AMERICA", "BRAZIL", 1996, 32333641442, 5]); 
+			data.push(["AMERICA", "BRAZIL", 1997, 31327384072, 5]); 
+			data.push(["AMERICA", "EUA", 1992, 27910388563, 5]); 
+			data.push(["AMERICA", "EUA", 1993, 28669881069, 5]); 
+			data.push(["AMERICA", "EUA", 1994, 29343326950, 5]); 
+			data.push(["AMERICA", "EUA", 1995, 28922380004, 5]); 
+			data.push(["AMERICA", "EUA", 1996, 29361749191, 5]); 
+			data.push(["AMERICA", "EUA", 1997, 29421629324, 5]); 
+
+response = {
+	data: data,
+	columnOptions: JSON op da mesma forma que na tabela do jcrosstable,
+	message: "consulta realizada com sucesso",
+	executedQuery: "select region, nation, ano, sum(receita), count(quantidade) where 1=1",
+	updateQuery: false,
+	time: 100,
+	olap: [{column:"nation", rollup:"region", drilldown:"city"}, {column:"region", rollup:"", drilldown:"nation"}],
+	typeSpatialQuery: "intersects",
+	spatialWindowQuery: [{x:80.6, y:45.8, z:45.8, w:80.6}],
+	updateSpatialWindowQuery: false
+}
