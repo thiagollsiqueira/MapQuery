@@ -1,0 +1,18 @@
+﻿  SBindex.cpp
+c:\users\usuario\documents\visual studio 2010\projects\sbindex\sbindex\sbindex.cpp(14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+c:\users\usuario\documents\visual studio 2010\projects\sbindex\sbindex\sbindex.cpp(104): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+c:\users\usuario\documents\visual studio 2010\projects\sbindex\sbindex\sbindex.cpp(144): warning C4018: '<' : signed/unsigned mismatch
+c:\users\usuario\documents\visual studio 2010\projects\sbindex\sbindex\sbindex.cpp(192): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+c:\users\usuario\documents\visual studio 2010\projects\sbindex\sbindex\sbindex.cpp(232): warning C4018: '<' : signed/unsigned mismatch
+c:\users\usuario\documents\visual studio 2010\projects\sbindex\sbindex\sbindex.cpp(280): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+c:\users\usuario\documents\visual studio 2010\projects\sbindex\sbindex\sbindex.cpp(320): warning C4018: '<' : signed/unsigned mismatch
+c:\users\usuario\documents\visual studio 2010\projects\sbindex\sbindex\sbindex.cpp(369): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+c:\users\usuario\documents\visual studio 2010\projects\sbindex\sbindex\sbindex.cpp(409): warning C4018: '<' : signed/unsigned mismatch
+  LINK : C:\Users\Usuario\documents\visual studio 2010\Projects\SBindex\Debug\SBindex.dll not found or not built by the last incremental link; performing full link
+     Creating library C:\Users\Usuario\documents\visual studio 2010\Projects\SBindex\Debug\SBindex.lib and object C:\Users\Usuario\documents\visual studio 2010\Projects\SBindex\Debug\SBindex.exp
+  SBindex.vcxproj -> C:\Users\Usuario\documents\visual studio 2010\Projects\SBindex\Debug\SBindex.dll

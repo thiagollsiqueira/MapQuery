@@ -1,0 +1,4 @@
+deleted
+
+"The ipch cache folder can be safely deleted -- it's just used to speed up IntelliSense for any C/C++ files that are opened. It's better to delete the folder after closing VS Code though, in case one of our extension processes is using a cache file."
+https://github.com/microsoft/vscode-cpptools/discussions/10637

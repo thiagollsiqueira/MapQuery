@@ -1,0 +1,51 @@
+﻿Build started 14/12/2012 09:36:27.
+     1>Project "C:\Users\RenataNote\Documents\Visual Studio 2012\Projects\SBindex\SBindex\SBindex.vcxproj" on node 2 (Build target(s)).
+     1>PrepareForBuild:
+         Creating directory "C:\Users\RenataNote\Documents\Visual Studio 2012\Projects\SBindex\x64\Debug\".
+       InitializeBuildStatus:
+         Creating "x64\Debug\SBindex.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc110.pdb" /Gd /TP /errorReport:prompt InterfaceSBindex.cpp SBindex.cpp Sbitvector.cpp SpatialQueryWindow.cpp
+         SpatialQueryWindow.cpp
+         Sbitvector.cpp
+     1>Sbitvector.cpp(82): warning C4101: 'i' : unreferenced local variable
+     1>Sbitvector.cpp(82): warning C4101: 'ok' : unreferenced local variable
+         SBindex.cpp
+     1>SBindex.cpp(14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+     1>SBindex.cpp(17): warning C4267: 'argument' : conversion from 'size_t' to 'long', possible loss of data
+     1>SBindex.cpp(33): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>SBindex.cpp(48): warning C4267: 'return' : conversion from 'size_t' to 'int', possible loss of data
+     1>SBindex.cpp(104): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+     1>SBindex.cpp(122): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>SBindex.cpp(159): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>SBindex.cpp(192): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+     1>SBindex.cpp(210): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>SBindex.cpp(246): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>SBindex.cpp(280): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+     1>SBindex.cpp(298): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>SBindex.cpp(334): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>SBindex.cpp(369): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : see declaration of 'fopen'
+     1>SBindex.cpp(387): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>SBindex.cpp(423): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+         InterfaceSBindex.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\RenataNote\Documents\Visual Studio 2012\Projects\SBindex\x64\Debug\SBindex.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\RenataNote\Documents\Visual Studio 2012\Projects\SBindex\x64\Debug\SBindex.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\RenataNote\Documents\Visual Studio 2012\Projects\SBindex\x64\Debug\SBindex.lib" /MACHINE:X64 /DLL x64\Debug\InterfaceSBindex.obj
+         x64\Debug\SBindex.obj
+         x64\Debug\Sbitvector.obj
+         x64\Debug\SpatialQueryWindow.obj
+            Creating library C:\Users\RenataNote\Documents\Visual Studio 2012\Projects\SBindex\x64\Debug\SBindex.lib and object C:\Users\RenataNote\Documents\Visual Studio 2012\Projects\SBindex\x64\Debug\SBindex.exp
+         SBindex.vcxproj -> C:\Users\RenataNote\Documents\Visual Studio 2012\Projects\SBindex\x64\Debug\SBindex.dll
+       FinalizeBuildStatus:
+         Deleting file "x64\Debug\SBindex.unsuccessfulbuild".
+         Touching "x64\Debug\SBindex.lastbuildstate".
+     1>Done Building Project "C:\Users\RenataNote\Documents\Visual Studio 2012\Projects\SBindex\SBindex\SBindex.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.78
